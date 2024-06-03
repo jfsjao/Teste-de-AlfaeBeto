@@ -1,0 +1,39 @@
+Seguindo esses passos, você poderá configurar e executar um contêiner Docker para um site WordPress com um banco de dados MySQL, desde a preparação do ambiente até a administração do site.
+
+	Preparar o Ambiente
+
+1. Configurar os Contêineres
+•	Definir uma Rede:
+   - Crie uma rede Docker para permitir que os contêineres WordPress e MySQL se comuniquem entre si.
+•	Configurar o Contêiner MySQL e WordPress:
+   - Crie um contêiner para o MySQL. Defina uma senha para o usuário root e, opcionalmente, crie um banco de dados específico para o WordPress.
+   - Crie um contêiner para o WordPress, configurando-o para usar o banco de dados MySQL. Certifique-se de que este contêiner esteja na mesma rede que o contêiner MySQL.
+
+	Iniciar os Contêineres
+
+2. Iniciar MySQL e o WordPress:
+   - Inicie o contêiner do MySQL primeiro para garantir que o banco de dados esteja pronto quando o WordPress tentar se conectar.
+   - Inicie o contêiner do WordPress. Ele se conectará ao contêiner do MySQL e iniciará o processo de configuração inicial do site.
+
+	Configurar o WordPress
+
+3. Acessar o Site:
+   - Com os contêineres rodando, acesse o site WordPress através do navegador web, digitando `http://localhost` seguido pela porta configurada (como ‘:8080’).
+   - Configuração Inicial do WordPress.
+
+4. Manter e Gerenciar
+•	Persistência de Dados:
+   	 - Configure volumes Docker para garantir que os dados do WordPress e do MySQL sejam salvos no seu sistema de arquivos, evitando a perda de dados ao reiniciar os contêineres.
+•	Backup e Atualizações:
+    	- Realize backups regulares dos dados e mantenha as imagens do WordPress e MySQL atualizadas para garantir segurança e funcionamento adequado.
+
+	Acesso ao Site WordPress
+
+5. Acessar via Navegador:
+    - Abra o navegador e digite ‘http://localhost’  seguido pela porta configurada para acessar o site WordPress.
+
+6. Criar Conta Administrativa:
+    - Durante a configuração inicial, crie uma conta de administrador.
+•	Gerenciar o Site
+  	  - Acesse o painel de administração do WordPress em ‘http://localhost/wp-admin’ para gerenciar seu site, adicionar conteúdo e instalar plugins.
+

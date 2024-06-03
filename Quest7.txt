@@ -1,0 +1,28 @@
+CREATE TABLE Clientes (
+    id INT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT,
+    cidade VARCHAR(100)
+);
+
+INSERT INTO Clientes (id, nome, idade, cidade) VALUES
+(1, 'João Silva', 45, 'Uberlândia'),
+(2, 'Maria Oliveira', 50, 'Uberlândia'),
+(3, 'Pedro Santos', 30, 'Araguari'),
+(4, 'Ana Costa', 18, 'Uberaba'),
+(5, 'Carlos Lima', 17, 'Araguari'),
+(6, 'Paula Souza', 18, 'Uberlândia'),
+(7, 'Lucas Fernandes', 19, 'Belo Horizonte'),
+(8, 'Juliana Mendes', 35, 'Araguari'),
+(9, 'Raquel Gonzaga', 18, 'São Paulo');
+
+SELECT * FROM Clientes
+WHERE cidade = 'Uberlândia' AND idade > 40;
+
+DELETE FROM Clientes
+WHERE idade <> 18;
+
+UPDATE Clientes
+SET cidade = 'Araguari'
+WHERE cidade <> 'Uberlândia';
+
