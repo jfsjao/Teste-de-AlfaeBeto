@@ -4,7 +4,7 @@ def soma_lista(lista):
         soma += elemento
     return soma
 
-lista = [1, 2, 55, 4, 5]
+lista = [1, 2, 3, 4, 5]
 print("O resultado da lista: ")
 resultado = soma_lista(lista)
 print(resultado)  # imprime 15
